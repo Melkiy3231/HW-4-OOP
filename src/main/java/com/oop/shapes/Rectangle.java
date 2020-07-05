@@ -1,0 +1,37 @@
+package main.java.com.oop.shapes;
+
+import main.java.com.oop.shapes.base.PlaneShape;
+import main.java.com.oop.vertex.Vertex2D;
+
+import java.util.List;
+
+public class Rectangle extends PlaneShape {
+
+    private final double width;
+    private final double height;
+
+    public Rectangle(Vertex2D vertex2D, double width, double height) {
+        super(List.of(vertex2D), "Rectangle");
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double getArea() {
+        return width * height;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return (width + height) * 2;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle: " + "\n" +
+                "width = " + width + "\n"
+                + "height = " + height + "\n"
+                + "Area : " + getArea() + "\n"
+                + "Perimeter : " + getPerimeter() + "\n";
+    }
+}
