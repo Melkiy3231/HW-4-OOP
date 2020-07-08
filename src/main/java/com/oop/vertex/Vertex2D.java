@@ -1,5 +1,4 @@
 package main.java.com.oop.vertex;
-
 public class Vertex2D implements Vertex {
     private final double x;
     private final double y;
