@@ -1,11 +1,15 @@
 package main.java.com.oop.vertex;
+public class Vertex3D extends Vertex2D {
 
-public class Vertex3D extends Vertex {
+    public final double z;
+
     public Vertex3D(double x, double y, double z) {
-        super(x, y, z);
+        super(x, y);
+        this.z = z;
     }
 
     @Override
     public String toString() {
-        return "(x = " + super.getX() + ", y = " + super.getY() + ", z = " + super.getZ() + ")";    }
+        return "{x = " + super.getX() + ", y = " + super.getY() + ", z = " + z + "}";
+    }
 }
