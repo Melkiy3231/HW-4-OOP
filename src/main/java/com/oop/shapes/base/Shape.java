@@ -4,7 +4,7 @@ public class Shape {
     import java.util.List;
 
     public class Shape {
-        protected final List vertex;
+        private final List vertex;
         private final String name;
 
         public Shape(List vertex, String name) {
