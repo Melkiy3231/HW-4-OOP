@@ -6,10 +6,14 @@ import main.java.com.oop.interfaces.PerimeterMeasurable;
 import java.util.List;
 
 public abstract class PlaneShape extends Shape implements PerimeterMeasurable, AreaMeasurable {
-    private List<Vertex> vertex2D;
 
-    public PlaneShape(List<Vertex> vertex2D) {
-        super(vertex2D);
-        this.vertex2D = vertex2D;
+    public PlaneShape(List<Vertex2D> vertex2D, String name) {
+        super(vertex2D, name);
+    }
+
+    @Override
+    public String toString() {
+        return "{" + " Figure Name: " + getName() + " Area= " + getArea() + " Perimeter = " +
+                getPerimeter() + "}\n" + super.getVertices();
     }
 }
