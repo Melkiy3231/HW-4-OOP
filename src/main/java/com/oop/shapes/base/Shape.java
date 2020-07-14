@@ -1,7 +1,6 @@
 package main.java.com.oop.shapes.base;
 import java.util.List;
 public class Shape {
-    public class Shape {
         private final List vertex;
         private final String name;
 
@@ -18,4 +17,3 @@ public class Shape {
                     '}';
         }
     }
-}
