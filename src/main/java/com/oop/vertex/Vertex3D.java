@@ -1,7 +1,7 @@
 package main.java.com.oop.vertex;
 public class Vertex3D extends Vertex2D {
 
-    public final double z;
+    private final double z;
 
     public Vertex3D(double x, double y, double z) {
         super(x, y);
