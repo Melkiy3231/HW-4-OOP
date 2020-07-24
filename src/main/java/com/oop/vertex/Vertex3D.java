@@ -1,5 +1,6 @@
 package main.java.com.oop.vertex;
-public class Vertex3D extends Vertex2D {
+
+public  class Vertex3D extends Vertex2D {
 
     private final double z;
 
@@ -11,5 +12,9 @@ public class Vertex3D extends Vertex2D {
     @Override
     public String toString() {
         return "{x = " + super.getX() + ", y = " + super.getY() + ", z = " + z + "}";
+    }
+
+    public double getDistance(Vertex2D a, Vertex2D b) {
+        return 0;
     }
 }
