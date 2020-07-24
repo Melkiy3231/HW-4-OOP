@@ -1,21 +1,26 @@
+
 package main.java.com.oop;
+
 import main.java.com.oop.shapes.*;
-import main.java.com.oop.shapes.base.Shape;
 import main.java.com.oop.vertex.Vertex2D;
 import main.java.com.oop.vertex.Vertex3D;
-
-public class Main {
+import java.util.ArrayList;
+import java.util.List;
+public  class Main {
     public static void main(String[] args) {
-        MyList<Integer> integerMyList = new MyList<>();
-        List<Shape> shapes = new ArrayList<Shape>();
-        shapes.add(new Circle(new Vertex2D(1, 2), 4, radius));
-        shapes.add(new Rectangle(new Vertex2D(2, 5), 2.4, 5.8));
-        shapes.add(new Triangle(new Vertex2D(-2, 6), new Vertex2D(3, 5), new Vertex2D(4, 0)));
-        shapes.add(new Sphere(new Vertex3D(2, 4, 6), 3));
-        shapes.add(new SquarePyramid(new Vertex3D(22, 44, 33), 58, 23));
-        shapes.add(new Cuboid(new Vertex3D(32, 45, 23), 34, 12, 19));
-        for (Shape shape : shapes) {
-            System.out.println(shape);
-        }
+        List<Sphere> shapes = new ArrayList<>();
+        shapes.add(new Triangle(new Vertex2D(3, 1), new Vertex2D(50, 71), new Vertex2D(21, 7)));
+        shapes.add(new Rectangle(new Vertex2D(15, 15), 15, 15));
+        shapes.add(new Circle(new Vertex2D(10, 5), 10));
+        shapes.add(new Cuboid(new Vertex3D(12, 32, 15), 51, 12, 41));
+        shapes.add(new Sphere(new Vertex3D(10, 10, 10), 20));
+        shapes.add(new SquarePyramid
+                (new Vertex3D(10, 10, 10),
+                        new Vertex3D(20, 20, 20),
+                        new Vertex3D(30, 30, 30),
+                        new Vertex3D(40, 40, 40),
+                        new Vertex3D(50, 50, 50),
+                        10, 20));
+        shapes.forEach(shape -> System.out.println(shape.toString()));
     }
 }
