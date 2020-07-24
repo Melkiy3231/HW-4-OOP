@@ -3,20 +3,21 @@ package main.java.com.oop.shapes;
 import main.java.com.oop.shapes.base.SpaceShape;
 import main.java.com.oop.vertex.Vertex3D;
 
-import java.util.List;
-
+import java.util.Collections;
 
 public class Sphere extends SpaceShape {
-    private final double radius;
+    private double radius;
+    private Vertex3D center;
 
-    public Sphere(Vertex3D vertex3D, double radius) {
-        super(List.of(vertex3D), "Sphere");
+    public Sphere(Vertex3D center, double radius) {
+        super(Collections.singletonList(center));
         this.radius = radius;
+        this.center = center;
     }
 
     @Override
     public double getArea() {
-        return 4 * Math.PI * Math.pow(radius, 2);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
@@ -26,9 +27,10 @@ public class Sphere extends SpaceShape {
 
     @Override
     public String toString() {
-        return "Sphere: " + "\n" +
-                "radius = " + radius + "\n" +
-                "Area : " + getArea() + "\n" +
-                "Volume: " + getVolume() + "\n";
+        return "Spheren " +
+                " center=" + center +
+                " radius=" + radius +
+                " area=" + getArea() +
+                " volume=" + getVolume();
     }
 }
