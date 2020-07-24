@@ -11,7 +11,7 @@ public class Triangle extends PlaneShape {
     private final double ac;
 
     public Triangle(Vertex2D a, Vertex2D b, Vertex2D c) {
-        super(List.of(a, b, c), "Triangle");
+        super(List.of(a, b, c));
         this.ab = a.getDistance(a, b);
         this.bc = b.getDistance(b, c);
         this.ac = c.getDistance(a, c);
@@ -38,4 +38,3 @@ public class Triangle extends PlaneShape {
                 + "Perimeter : " + getPerimeter() + "\n";
     }
 }
-
