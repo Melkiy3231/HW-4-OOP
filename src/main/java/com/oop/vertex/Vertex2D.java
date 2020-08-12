@@ -27,7 +27,7 @@ public  class Vertex2D extends Vertex  {
 
     }
 
-    public double getDistance(Vertex2D a, Vertex2D b) {
-        return 0;
+   private double getDistance() {
+        return getDistance();
     }
 }
