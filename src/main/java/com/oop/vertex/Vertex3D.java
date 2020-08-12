@@ -14,7 +14,7 @@ public  class Vertex3D extends Vertex2D {
         return "{x = " + super.getX() + ", y = " + super.getY() + ", z = " + z + "}";
     }
 
-    public double getDistance(Vertex2D a, Vertex2D b) {
-        return 0;
+       private double getDistance() {
+        return getDistance();
     }
 }
